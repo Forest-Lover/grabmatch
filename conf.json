@@ -1,0 +1,73 @@
+{
+    "//" : "说明： '//' 表示注释，无实际含义",
+    "grab" : { 
+        "usebox" : false,
+        "box" : "100,100,200,200",
+        "savepath" : "./tmp/grab.png",
+        "interval" : 1
+    },
+    "match" : {
+        "//" : "0(完全匹配)-1; conf内遍历执行不允许无关配置",
+        "threshold" : "0.01",
+        "conf" : {
+            "__tmplpath__" : {
+                "CLICK_POS" : "100,200",
+                "CLICK_IMG" : "./imgs/bofang.jpg",
+                "INPUT_STR" : "input from conf",
+                "KEY_PRESS" : "enter",
+                "MAIL_SEND" : "0",
+                "SLEEP" : 600
+            },
+            "./imgs/baidu.jpg" : {
+                "CLICK_IMG" : "./imgs/baidu.jpg",
+                "MAIL_SEND" : "0"
+            },
+            "./imgs/conf_bofang.png" : {
+                "CLICK_IMG" : "./imgs/conf_bofang.png"
+            },
+            "./imgs/conf_xiayidanyuan.png" : {
+                "CLICK_IMG" : "./imgs/conf_xiayidanyuan.png"
+            },
+            "./imgs/conf_renjiyanzheng.png" : {
+                "CLICK_IMG" : "./imgs/conf_renjiyanzheng.png",
+                "MAIL_SEND" : "1",
+                "SLEEP" : 600
+            },
+            "./imgs/conf_renlianshibie.png" : {
+                "CLICK_IMG" : "./imgs/conf_renlianshibie.png",
+                "MAIL_SEND" : "2",
+                "SLEEP" : 600
+            }
+        }
+    },
+    "mail" : {
+        "smtp_addr" : "smtp.qq.com",
+        "smtp_port" : 465,
+        "sender" : "1771880185@qq.com",
+        "passwd" : "ucqwhxangkstidih",
+        "reciver" : "1771880185@qq.com",
+        "conf" : {
+            "0" : {
+                "name_from": "NAME_FROM",
+                "name_to": "NAME_TO",
+                "title" : "TITLE",
+                "content" : "this is mail content!",
+                "picture" : "./tmp/grab.png"
+            },
+            "1" : {
+                "name_from": "PYTHON脚本",
+                "name_to": "",
+                "title" : "人机验证",
+                "content" : "请登录电脑，输入验证码！",
+                "picture" : "./tmp/grab.png"
+            },
+            "2" : {
+                "name_from": "PYTHON脚本",
+                "name_to": "",
+                "title" : "人脸识别",
+                "content" : "请登录电脑，进行人脸识别！",
+                "picture" : "./tmp/grab.png"
+            }
+        } 
+    }
+}
