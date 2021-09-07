@@ -139,6 +139,7 @@ def main():
                 elif op == "CLICK_IMG":
                     pos = [0, 0]
                     if is_imgmatch(savepath, value, threshold, pos):
+                        fix_pos(conf, pos)
                         do_click(int(pos[0]), int(pos[1]))  
                         logging.debug("clicked img:" + str(pos))
                     else:
